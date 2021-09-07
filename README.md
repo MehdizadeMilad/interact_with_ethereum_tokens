@@ -24,3 +24,6 @@ Script should generate the signature for the provided message and private key
 ` npm ci `
 then 
 `npm run start`
+
+## to check client side, open the following file in a browser:
+`jsScript/index.html`

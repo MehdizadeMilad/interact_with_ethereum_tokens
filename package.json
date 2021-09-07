@@ -1,0 +1,19 @@
+{
+  "name": "lossless_test",
+  "version": "1.0.0",
+  "description": "simple api and client to interact with ethereum network",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend\\index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.1",
+    "web3": "^1.5.2"
+  }
+}

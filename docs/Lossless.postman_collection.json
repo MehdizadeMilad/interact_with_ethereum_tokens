@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "bd36456d-a49f-4015-981f-3a9b33ba900b",
+		"name": "Lossless",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Balance",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/graphql",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    balance( walletAddress : \"0xc9919a9eb691f571E41DB417f911135b4AC46FE7\")    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/graphql",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    balance( walletAddress : \"0xc9919a9eb691f571E41DB417f911135b4AC46FE7\")    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-I4l2iFJFocq5xPc+fPHFoenILG8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 22 Aug 2021 09:03:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"balance\": \"1181699.223376154621304006\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Authorize",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n    authorize (\r\n        message: \"Sample Message\",\r\n        walletAddress: \"0x4205E4e0589EDBB197A33a9b8c14e807F33CcDdd\",\r\n        signature: \"0x43e652c139c94b05eeca1ac3fcd0e77b74068be4af5f7a1100f72d8a5f0582d567dc51f008ff57f66593aecd32361b906a2d7c937963513fa3716b6cbb2a6a111c\"\r\n        )\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n    authorize (\r\n        message: \"Sample Message\",\r\n        walletAddress: \"0x4205E4e0589EDBB197A33a9b8c14e807F33CcDdd\",\r\n        signature: \"0x43e652c139c94b05eeca1ac3fcd0e77b74068be4af5f7a1100f72d8a5f0582d567dc51f008ff57f66593aecd32361b906a2d7c937963513fa3716b6cbb2a6a111c\"\r\n        )\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-C5pZW5ycGXnjl0puQEbd1OmWnK4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 22 Aug 2021 09:03:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"authorize\": true\n    }\n}"
+				}
+			]
+		}
+	]
+}

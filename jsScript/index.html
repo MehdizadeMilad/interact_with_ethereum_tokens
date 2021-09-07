@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="../node_modules/web3/dist/web3.min.js"></script>
+    <script src="./script.js"></script>
+
+    <title>Lossless Interview Test - Milad</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label style="margin-top: 20px;" for="userMessage">Your Message</label>
+          <textarea
+            class="form-control"
+            id="userMessage"
+            rows="3"
+            placeholder="Enter Message string here"
+          >Sample Message</textarea>
+
+          <label for="privateKey">Your Private key</label>
+          <textarea
+            class="form-control"
+            id="privateKey"
+            rows="3"
+            placeholder="Enter Private key string here"
+          >0x6bb55e2801b0fa9270e0dee617bfa054be47e3a761db0ccf8d8984e56ecef169</textarea>
+
+        </hr>
+          <textarea
+            class="form-control"
+            id="signature"
+            rows="3"
+            readonly
+            placeholder="Signature will come here"
+            style="margin-top: 30px; background-color:lightgreen;font-weight: bold;"
+          ></textarea>
+        </div>
+        <button type="submit" id="submitBtn" class="btn btn-primary">
+          Sign Message
+        </button>
+      </form>
+    </div>
+
+    <script>
+      var submitBtn = document.getElementById("submitBtn");
+
+      const resultArea = document.getElementById("signature");
+      resultArea.style.visibility = "hidden";
+
+      submitBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const message = document.getElementById("userMessage").value;
+        const privateKey = document.getElementById("privateKey").value;
+
+        const signIt = signMessage(message, privateKey);
+
+        resultArea.innerText = signIt.signature;
+        resultArea.style.visibility = "visible";
+      });
+    </script>
+  </body>
+</html>
